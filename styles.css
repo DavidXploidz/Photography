@@ -100,6 +100,7 @@ p{
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(min(400px, 100%), 1fr));
+    min-height: 100dvh;
 }
 .main__title{
     color: var(--colorprimary);
@@ -124,15 +125,15 @@ section{
     min-height: 100dvh;
     overflow-x: hidden;
 }
-.section-one{
+:is(.section-one, .section-two, .section-three){
     background-color: var(--colorsecondary);
     color: var(--colorprimary);
 }
-.section-two{
-    background-color: var(--colorsecondary);
-    color: var(--colorprimary);
+.section-two h1{
+    text-transform: uppercase;
+    text-align: center;
 }
-.btn {
+.btn{
     padding: 10px;
     border: none;
     background-color: transparent;
@@ -143,6 +144,7 @@ section{
     font-weight: 600;
     font-size: var(--step-1);
     letter-spacing: 3px;
+    cursor: pointer;
 }
 .btn-primary{
     background-color: var(--colorprimary);
@@ -162,4 +164,7 @@ section{
 }
 .hero__text{
     color: var(--colorprimary);
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    font-size: var(--step-1);
 }
