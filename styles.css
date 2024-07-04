@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap');
+
+:root{
+    /* Colors */
+    --black: #252525;
+    --white: #FAFAFA;
+    --colorprimary: #2E373A;
+    --colorsecondary: #CBCBCB;
+    --coloraccent: #FBFB9E;
+
+    /* Font */
+    --font-base: "Libre Baskerville", sans-serif;
+    --font-headings: "Odibee Sans", sans-serif;
+    --step--3: clamp(0.5064rem, 0.4821rem + 0.1211vi, 0.576rem);
+    --step--2: clamp(0.6076rem, 0.5686rem + 0.1954vi, 0.72rem);
+    --step--1: clamp(0.7292rem, 0.6697rem + 0.2971vi, 0.9rem);
+    --step-0: clamp(0.875rem, 0.788rem + 0.4348vi, 1.125rem);
+    --step-1: clamp(1.05rem, 0.9261rem + 0.6196vi, 1.4063rem);
+    --step-2: clamp(1.26rem, 1.0868rem + 0.8658vi, 1.7578rem);
+    --step-3: clamp(1.512rem, 1.2736rem + 1.1918vi, 2.1973rem);
+    --step-4: clamp(1.8144rem, 1.4902rem + 1.6212vi, 2.7466rem);
+    --step-5: clamp(2.1773rem, 1.7404rem + 2.1843vi, 3.4332rem);
+    --step-6: clamp(2.6127rem, 2.0288rem + 2.9196vi, 4.2915rem);
+
+    /* Utilities */
+    --h1: bold var(--step-6) var(--font-headings);
+    --h2: bold var(--step-4) var(--font-headings);
+    --h3: bold var(--step-2) var(--font-headings);
+    --links: bold var(--step-0) var(--font-base);
+    --p: var(--step-0) var(--font-base);
+    --subtext: var(--step--2) var(--font-base);
+    --transition: 0.3s ease-in-out;
+    --shadow: #000000030 0px 0px 10px 0px;
+    --shadowdark: #000000030 0px 5px 10px 5px;
+
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+body{
+    font-size: var(--p);
+    font-family: var(--ff);
+    min-height: 100vh;
+}
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+input, textarea, button, select{
+    font: inherit;
+}
+h1{
+    font: var(--h1);
+    padding-block: 1rem;
+}
+h2{
+    font: var(--h2);
+    padding-block: .7rem;
+}
+h3{
+    font: var(--h3);
+    padding-block: .5rem;  
+}
+:is(h1, h2, h3){
+  text-wrap: balance;
+}
+p{
+    font: var(--p);
+    margin-bottom: .5rem;
+    text-wrap: balance;
+}
+.links{
+    font: var(--links);
+    margin-top: 8px;
+}
+.subtext{
+    font: var(--subtext);
+    margin-top: -8px;
+}
+.contenedor{
+    width: min(90%, 120rem);
+    margin-inline: auto;
+}
+.grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(min(400px, 100%), 1fr));
+}
+.main{
+    background-color: var(--colorsecondary);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(400px, 100%), 1fr));
+}
+.main__title{
+    color: var(--colorprimary);
+    font-size: clamp(4.5rem, 3.4565rem + 5.2174vi, 7.5rem);
+    letter-spacing: 1.5px;
+}
+.main__welcome{
+    font-size: var(--step-2);
+    max-width: 550px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: var(--colorprimary);
+}
+.main__image{
+    z-index: -1;
+    align-self: flex-end;
+}
+.main__gear{
+    max-width: 100px;
+}
+section{
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+.section-one{
+    background-color: var(--colorsecondary);
+    color: var(--colorprimary);
+}
+.section-two{
+    background-color: var(--colorsecondary);
+    color: var(--colorprimary);
+}
+.btn {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-block: 1rem;
+    min-height: 50px;
+    min-width: 250px;
+    font-weight: 600;
+    font-size: var(--step-1);
+    letter-spacing: 3px;
+}
+.btn-primary{
+    background-color: var(--colorprimary);
+    color: var(--colorsecondary);
+}
+.pill{
+    border-radius: 100vw;
+}
+.hero{
+    text-align: left;
+}
+.hero__content{
+    align-self: center;
+}
+.hero__title{
+    text-transform: uppercase;
+}
+.hero__text{
+    color: var(--colorprimary);
+}
