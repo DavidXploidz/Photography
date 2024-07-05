@@ -50,6 +50,7 @@ body{
     font-size: var(--p);
     font-family: var(--ff);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 img, picture, svg, video{
     display: block;
