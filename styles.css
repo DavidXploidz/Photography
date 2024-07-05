@@ -168,3 +168,21 @@ section{
     line-height: 1.5;
     font-size: var(--step-1);
 }
+/* Collage */
+.collage{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(400px, 100%), 1fr));
+}
+.collage > img{
+    object-fit: cover;
+    height: 30rem;
+}
+/* Footer */
+.footer{
+    background-color: var(--colorprimary);
+    min-height: 100px;
+    color: var(--colorsecondary);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
