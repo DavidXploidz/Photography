@@ -2,6 +2,19 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger)
 
+
+    let mySplitTitle = new SplitType('.main__title');
+
+    gsap.from('.char',{
+        y: 115,
+        stagger: 0.03,
+    })
+    gsap.to('.char',{
+        y: 0,
+        delay: 1,
+        duration: .1
+    })
+
     // Animacion para el main o welcome
     const main = gsap.timeline({
         scrollTrigger: {

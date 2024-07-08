@@ -106,7 +106,6 @@ p{
 .main__title{
     color: var(--colorprimary);
     font-size: clamp(4.5rem, 3.4565rem + 5.2174vi, 7.5rem);
-    letter-spacing: 1.5px;
 }
 .main__welcome{
     font-size: var(--step-2);
@@ -187,3 +186,7 @@ section{
     place-items: center;
     text-align: center;
 }
+/* .char{
+    transform: translateY(115px);
+    transition: transform .3s;
+} */
