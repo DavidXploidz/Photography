@@ -5,11 +5,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Split Text Animation
     let mySplitTitle = new SplitType('.main__title');
 
-    gsap.from('.char',{ y: 115, stagger: 0.03 })
+    gsap.from('.char',{ delay: .3, y: 115, stagger: 0.03 })
     gsap.to('.char',{ y: 0, delay: 1, duration: .1 })
 
-    gsap.from('.main__image',{ x: 450, opacity: 0, scale: 0.5, filter: "blur(10px)" })
-    gsap.to('.main__image',{ x: 0, opacity: 1, duration: .1, filter: "blur(0px)", delay: 1 })
+    gsap.from('.main__image',{ delay: .3, x: 450, opacity: 0, scale: 0.5, filter: "blur(10px)" })
+    gsap.to('.main__image',{ delay: 1, x: 0, opacity: 1, duration: .1, filter: "blur(0px)" })
+
+    gsap.from('.main__gear',{rotation: 0,})
+    gsap.to('.main__gear',{rotation: 360, duration: 5, ease: "elastic",})
 
     // Animacion para el main o welcome
     const main = gsap.timeline({
@@ -34,7 +37,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
-    gear.from('.main__gear', {rotation: 720,})
+    gear.from('.main__gear', {rotation: 0,})
+    gear.to('.main__gear', {rotation: 360,})
 
     // Animacion para la seccion 1
     const section_1 = gsap.timeline({
