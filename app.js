@@ -2,18 +2,14 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger)
 
-
+    // Split Text Animation
     let mySplitTitle = new SplitType('.main__title');
 
-    gsap.from('.char',{
-        y: 115,
-        stagger: 0.03,
-    })
-    gsap.to('.char',{
-        y: 0,
-        delay: 1,
-        duration: .1
-    })
+    gsap.from('.char',{ y: 115, stagger: 0.03 })
+    gsap.to('.char',{ y: 0, delay: 1, duration: .1 })
+
+    gsap.from('.main__image',{ x: 450, opacity: 0, scale: 0.5, filter: "blur(10px)" })
+    gsap.to('.main__image',{ x: 0, opacity: 1, duration: .1, filter: "blur(0px)", delay: 1 })
 
     // Animacion para el main o welcome
     const main = gsap.timeline({
