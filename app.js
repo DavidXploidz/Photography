@@ -70,24 +70,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     section_2.from('.section-two h1',{ opacity: 0, filter: "blur(10px)", scale: 0.5})
     section_2.to('.section-two h1',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(1)',{ opacity: 0,  scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(1)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(2)',{ opacity: 0,  scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(2)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(3)',{ opacity: 0, scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(3)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(4)',{ opacity: 0, scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(4)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(5)',{ opacity: 0, scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(5)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(6)',{ opacity: 0, scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(6)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(7)',{ opacity: 0, scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(7)',{ opacity: 1, filter: "blur(0px)",})
-    section_2.from('.collage img:nth-child(8)',{ opacity: 0, scale: 0.5, filter: "blur(10px)",})
-    section_2.to('.collage img:nth-child(8)',{ opacity: 1, filter: "blur(0px)",})
-
-
+    const images = document.querySelectorAll('.collage img');
+    images.forEach(function(image, index){
+        section_2.from(`.collage img:nth-child(${index+1})`,{ opacity: 0,  scale: 0.5, filter: "blur(10px)",})
+        section_2.to(`.collage img:nth-child(${index+1})`,{ opacity: 1, filter: "blur(0px)",})
+    })
 
 });
 
